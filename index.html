@@ -3,15 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <title>Sara Horowitz</title>
+  <link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css"
   <script type="text/javascript" src="bower_components/d3/d3.js"></script>
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="bower_components/d3-cloud/build/d3.layout.cloud.js"></script>
-  <script type="text/javascript" src="scripts/tags.js"></script>
+  <script type="text/javascript" src="bower_components/fullpage.js/jquery.fullPage.js"></script>
+  <!-- <script type="text/javascript" src="scripts/tags.js"></script> -->
 </head>
 <body>
-  <p>YIO</p>
-  <button><a href="test.html">TESTING</a></button>
-  <div id="vis"></div>
-  <script type="text/javascript" src="scripts/testcloud.js"></script>
+  <div id="fullpage">
+    <div class="section home">
+      <ul id="myMenu">
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
+        <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
+        <li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
+      </ul>
+      <h1 id="name">Sara Horowitz</h1>
+      <h2>Full Stack Web Developer | Data Visualizer </h2>
+    </div>
+    <div class="section about">
+      <h1>About Me</h1>
+      <h3>I am an enthusiastic and artistic full stack web developer specializing in data visualization and all things Javascript.</h3>
+      <p>After working with various dev shops and extremely skilled engineers in my previous technical writing and start-up operations roles, I decided that I wanted to learn the languages everyone else seemed to be speaking and to start creating things for myself. I am now a graduate of the <span> <img class="logos" src="css/GeneralAssemblylogo.jpg"> </span> Web Development Immersive and the <span> <img class="logos" src="css/metis_logo.png"> </span> Data Visualization course, and believe that I have found the talent and the passion that I had always been searching for in my professional life.</p>
+      <p>My skills include but are not limited to:</p>
+      <div class="skills">
+        <ul>
+          <li>Javascript</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>React.js</li>
+          <li>D3.js</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section portfolio">Some section
+      <div class="slide"> Slide 1 </div>
+      <div class="slide"> Slide 2 </div>
+      <div class="slide"> Slide 3 </div>
+      <div class="slide"> Slide 4 </div>
+      <div class="slide"> Slide 5 </div>
+    </div>
+    <div class="section">Some section</div>
+  </div>
+  <script type="text/javascript" src="scripts/app.js"></script>
 </body>
 </html>

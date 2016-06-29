@@ -1,0 +1,32 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+}
+#myMenu {
+  margin-bottom: -5px;
+  margin-top: 0px;
+  text-align: right;
+}
+#myMenu li {
+  display: inline-block;
+  text-align: right;
+}
+
+.home {
+  /*background-image: url("spiral.jpeg");*/
+  background-size: cover;
+}
+
+#name {
+  color: white;
+}
+
+.logos {
+  width: 25px;
+  height: 25px;
+}
+
+.portfolio {
+  /*background-image: url("umbrella.jpeg");*/
+  background-size: cover;
+}
