@@ -3,15 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <title>Sara Horowitz</title>
-  <script type="text/javascript" src="bower_components/d3/d3.js"></script>
-  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <link rel="icon" href="favicon.png" type="image/png"/ >
+  <link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,300italic,700,900"/>
 
-        <script type="text/javascript" src="bower_components/d3-cloud/build/d3.layout.cloud.js"></script>
-        <script type="text/javascript" src="scripts/tags.js"></script>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/d3/d3.js"></script>
+  <script type="text/javascript" src="bower_components/d3-tip/index.js"></script>
+  <script type="text/javascript" src="bower_components/fullpage.js/jquery.fullPage.js"></script>
 </head>
+
 <body>
-  <p>YIO</p>
-  <div id="vis"></div>
-  <script type="text/javascript" src="scripts/testcloud.js"></script>
+  <ul id="myMenu">
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Home</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">About</a></li>
+    <li data-menuanchor="thirdPage"><a id="skillsButton" href="#thirdPage">Skills</a></li>
+    <li data-menuanchor="fourthPage"><a href="#fourthPage">Portfolio</a></li>
+    <li data-menuanchor="fifthPage"><a href="#fifthPage">Contact</a></li>
+  </ul>
+  <div id="fullpage">
+    <!-- home -->
+    <div class="section home">
+      <h1 id="name">Sara Horowitz</h1>
+      <h2>Full Stack Web Developer | Data Visualizer </h2>
+    </div>
+    <!-- about -->
+    <div class="section about">
+      <h1>About</h1>
+      <p id="quote"><i>"Information focuses on the 'now' and the 'what'... In contrast, knowledge feels like it's more concerned with causes and consequences, past influences and future projections. The 'how' and the 'why'." </br> - David McCandless</i></p>
+      <div class="content">
+        <h2>I am an enthusiastic and artistic full stack web developer specializing in data visualization and all things Javascript.</h2>
+        <p>After working with various dev shops and extremely skilled engineers in my previous technical writing and start-up operations roles, I decided that I wanted to learn the languages everyone else seemed to be speaking and to start creating things for myself. I am now a graduate of the General Assembly Web Development Immersive and the Metis Data Visualization course, and believe that I have found the talent and the passion that I had always been searching for in my professional life.</p>
+        <h3><a class= "resume" target="_blank" href="Sara-Horowitz-Resume.pdf">Resume</a></h3>
+      </div>
+    </div>
+    <!-- skills -->
+    <div class ="section skills">
+      <h1>Skills</h1>
+      <button class= "btn all">All</button>
+      <button class= "btn type">By Type</button>
+      <div id="d3"></div>
+    </div>
+    <!-- portfolio -->
+    <div class="section portfolio">
+      <h1 class="slide-title">Portfolio</h1>
+      <div class="slide">
+        <h2>Counting Vitae</h2>
+        <h4><a target="_blank" href="http://shorowitz.github.io/Work-Market-Challenge/">Visit Visualization</a></h4>
+        <p>An interactive visualization of character frequency in a resume. Made using D3.js and D3-tip, and hosted on Github Pages.</p>
+        <div class="sshot">
+          <img src="css/images/CountingVitae.png">
+        </div>
+       </div>
+      <div class="slide">
+        <h2>Images of The Times</h2>
+        <h4><a target="_blank" href="https://nyt-in-images.herokuapp.com/">Visit Website</a></h4>
+        <p>Images of the Times is a Node-Express-PostgreSQL-React app that allows a guest user to view the top New York Times images of the day, and a registered user to play a caption-to-photo matching game using images and their corresponding captions from a specific New York Times section. This application pulls from two New York Times APIs, and successfully integrates JQuery-UI with React.js.</p>
+        <div class="sshot">
+          <img src="css/images/Arts-NYT.png">
+        </div>
+      </div>
+      <div class="slide">
+        <h2>TRAIN TRAFFIC</h2>
+        <h4><a target="_blank" href="http://train-traffic.herokuapp.com/">Visit Website</a></h4>
+        <p>A RESTful CRUD application for crowd-sourced NYC subway monitoring, made with Node, Express, PostgreSQL and EJS. TRAIN TRAFFIC allows riders to view the MTA Service Status App widget on any page, but to also add comments for a particular stop on a particular line to give other riders a heads up about what is going on there at that time and date.</p>
+        <div class="sshot">
+          <img src="css/images/traintraffic.png">
+        </div>
+      </div>
+      <div class="slide">
+        <h2>Git Garden</h2>
+        <h4><a target="_blank" href="http://45.55.179.210/">Visit Website</a></h4>
+        <p>A Node-Express-PostgreSQL-React application for a visual representation of activity on a registered user’s favorite Github repositories. D3.js used for detailed view of repository data.</p>
+        <div class="sshot">
+          <img src="css/images/GitGarden.png">
+        </div>
+      </div>
+      <div class="slide">
+        <h2>DYNAMITE</h2>
+        <h4><a target="_blank" href="http://shorowitz.github.io/Dynamite/">Play Game</a></h4>
+        <p>An in-browser, two-player, interactive jQuery guessing game.</p>
+        <div class="sshot">
+          <img src="css/images/dynamite1.png">
+        </div>
+      </div>
+    </div>
+    <!-- contact -->
+    <div class="section contact">
+      <h1>Contact</h1>
+      <div class="info">
+        <h2>Email: sslhorowitz@gmail.com</h2>
+        <h2>LinkedIn: sarahorowitz</h2>
+        <h2>Github: shorowitz</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="scripts/app.js"></script>
+  <script type="text/javascript" src="scripts/skills.js"></script>
+
+  <!-- <script type="text/javascript" src="scripts/testcloud.js"></script> -->
 </body>
 </html>
