@@ -1,16 +1,19 @@
 $(document).ready(function() {
   console.log('script is linked')
     $('#fullpage').fullpage({
-        anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+        anchors:['home', 'about', 'skills', 'portfolio', 'contact'],
         slidesNavigation: true,
         menu: '#myMenu',
         scrollBar: true,
     });
 
 // inspired by and referenced : https://github.com/vlandham/gates_bubbles
-  var margin = {top: 20, right: 20, bottom: 20, left: 20};
 
-  var width = 800 - margin.left - margin.right,
+  function checkLocation() {
+
+    var margin = {top: 20, right: 20, bottom: 20, left: 20};
+
+    var width = 800 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom,
       center = {
         "x": width / 2,
@@ -59,6 +62,7 @@ $(document).ready(function() {
   function bubbles (skillsData) {
     svg = d3.select("#d3")
       .append("svg")
+      .attr("class", "viz")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
@@ -78,6 +82,8 @@ $(document).ready(function() {
       .on('mouseout', tip.hide)
 
     circles.transition().duration(2000).attr("r", function(d) { return d.radius; })
+
+
   };
 
   function charge(d) {
@@ -187,20 +193,38 @@ $(document).ready(function() {
     };
   }
 
-  bubbles(skillsData)
-  start()
-  displayAll()
+    //
 
-  d3.selectAll(".type")
-    .on("click", function(e) {
-      displayTypes()
-      displayTypeLabels()
-    })
 
-  d3.selectAll(".all")
-    .on("click", function(e) {
-      displayAll()
-      hideTypes()
-    })
+    d3.selectAll(".type")
+      .on("click", function(e) {
+        displayTypes()
+        displayTypeLabels()
+      })
+
+    d3.selectAll(".all")
+      .on("click", function(e) {
+        displayAll()
+        hideTypes()
+      })
+
+      // bubbles(skillsData)
+      // start()
+      // displayAll()
+
+
+        var currentHash = location.hash;
+        if (currentHash ==="#skills") {
+          svg = d3.selectAll(".viz").remove()
+          bubbles(skillsData)
+          start()
+          displayAll()
+        }
+      }
+
+
+    window.onhashchange = checkLocation
+
+
 
   });
