@@ -1,32 +1,184 @@
 body {
   margin: 0 auto;
   text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #333
 }
+
 #myMenu {
-  margin-bottom: -5px;
-  margin-top: 0px;
-  text-align: right;
-}
-#myMenu li {
-  display: inline-block;
+  position:fixed;
+  top: 10px;
+  right: 10px;
+  height: 40px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   text-align: right;
 }
 
+#myMenu li {
+  display: inline-block;
+  padding: 10px;
+  color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+
+#myMenu li a{
+  text-decoration: none;
+  color: #000;
+}
+
+.section {
+  padding: 0px 20px 0px 20px;
+}
+
+.section h1 {
+  text-align: center;
+  font-variant: small-caps;
+  font-weight: 400;
+}
+
 .home {
-  /*background-image: url("spiral.jpeg");*/
+  background-image: url("images/fog.jpg");
   background-size: cover;
 }
 
 #name {
-  color: white;
+  font-weight: 400;
+  font-variant: small-caps;
+  font-size: 72px;
 }
 
-.logos {
-  width: 25px;
-  height: 25px;
+.home h2 {
+  font-size: 40px;
 }
 
-.portfolio {
-  /*background-image: url("umbrella.jpeg");*/
+.about {
+  background-image: url("images/graysea.jpg");
   background-size: cover;
+}
+
+.about h1 {
+  margin-bottom: 0px 0px 40px 0px;
+}
+
+.content {
+  /*border: 1px solid black;*/
+  display: inline-block;
+  max-width: 800px;
+  margin: 10px 0px 50px 0px;
+}
+
+.content p {
+  width: 600px;
+  margin: 0 auto;
+  top: 6px;
+  position: relative;
+}
+
+.content h3 {
+  font-size: 20px;
+  margin: 50px;
+}
+
+.content h3 a {
+  text-decoration: none;
+  color: inherit;
+  background:#fff;
+  background: rgba(255,255,255, 0.5);
+  -webkit-border-radius: 10px;
+            border-radius: 10px;
+  padding: 10px;
+}
+
+#quote {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.skills {
+  background-image: url("images/sea.jpeg");
+  background-size: cover;
+}
+
+.skills h1{
+  margin-bottom: 0px 0px 40px 0px;
+}
+.portfolio {
+  background-image: url("images/graysea.jpg");
+  background-size: cover;
+}
+
+.slide-title{
+  padding-top: 25px;
+  margin-bottom: -50px;
+}
+
+.slide p {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 850px;
+}
+
+.sshot {
+  height: 300px;
+  padding-top: 20px;
+}
+
+.sshot img{
+  height:100%;
+  box-shadow: 0 0 2px #666;
+  background: #000;
+}
+
+.contact {
+  background-image: url("images/sea.jpeg");
+  background-size: cover;
+}
+
+.contact h1{
+  margin: -100px 0px 100px 0px;
+}
+
+.info {
+  margin: 0 auto;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 8px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
 }
