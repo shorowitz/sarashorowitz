@@ -41,8 +41,10 @@
     <!-- skills -->
     <div class ="section skills">
       <h1>Skills</h1>
-      <button class= "btn all">All</button>
-      <button class= "btn type">By Type</button>
+      <ul class="toggle">
+        <li class= "btn all">All Skills</li>
+        <li class= "btn type">Skills By Type</li>
+      </ul>
       <div id="d3"></div>
     </div>
     <!-- portfolio -->
@@ -59,7 +61,7 @@
       <div class="slide">
         <h2>Images of The Times</h2>
         <h4><a target="_blank" href="https://nyt-in-images.herokuapp.com/">Visit Website</a></h4>
-        <p>Images of the Times is a Node-Express-PostgreSQL-React app that allows a guest user to view the top New York Times images of the day, and a registered user to play a caption-to-photo matching game using images and their corresponding captions from a specific New York Times section. This application pulls from two New York Times APIs, and successfully integrates JQuery-UI with React.js.</p>
+        <p>Images of the Times is a Node-Express-PostgreSQL-React app that allows a guest user to view the top New York Times images of the day, and a registered user to play a caption-to-photo matching game using images and their corresponding captions from a specific New York Times section.</p>
         <div class="sshot">
           <img src="css/images/Arts-NYT.png">
         </div>
@@ -93,9 +95,13 @@
     <div class="section contact">
       <h1>Contact</h1>
       <div class="info">
-        <h2>Email: sslhorowitz@gmail.com</h2>
-        <h2>LinkedIn: sarahorowitz</h2>
-        <h2>Github: shorowitz</h2>
+        <h2><span class="info-type">Email: </span><a href="mailto:sslhorowitz@gmail.com" target="_top">sslhorowitz@gmail.com</a></h2>
+        <h2><span class="info-type">LinkedIn: </span><a href="https://www.linkedin.com/in/sarahorowitz" target="_blank"> sarahorowitz</a></h2>
+        <h2><span class="info-type">Github: </span><a href="https://github.com/shorowitz" target="_blank"> shorowitz</a></h2>
+      </div>
+      <div class="footer">
+        <p>Made with FullPage.js, D3, D3-tip and jQuery</p>
+        <p>Favicon designed by Creative Stall from The Noun Project</p>
       </div>
     </div>
 

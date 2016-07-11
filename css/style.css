@@ -114,6 +114,63 @@ body {
 .skills h1{
   margin-bottom: 0px 0px 40px 0px;
 }
+
+.toggle {
+  list-style: none;
+  margin: 0 auto;
+  display: flex;
+}
+
+.btn {
+  background-color: #FFFAFA;
+  font-size: 14px;
+  margin: 2px;
+  /*float: left;*/
+  padding: 5px;
+  background:#fff;
+  background: rgba(255,255,255, 0.5);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#d3 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.viz {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 8px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
 .portfolio {
   background-image: url("images/graysea.jpg");
   background-size: cover;
@@ -147,38 +204,37 @@ body {
 }
 
 .contact h1{
-  margin: -100px 0px 100px 0px;
+  margin: -15px 0px 50px 0px;
 }
 
 .info {
   margin: 0 auto;
 }
 
-.d3-tip {
-  line-height: 1;
+.info-type {
   font-weight: bold;
+}
+
+.info a {
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+.info a:link, a:visited {
+    color: blue;
+}
+
+.info a:hover {
+    color: red;
+}
+
+.footer {
+  margin-top: 200px;
+}
+
+.footer p {
+  margin: 0;
   padding: 5px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  border-radius: 2px;
-}
-
-
-.d3-tip:after {
-  box-sizing: border-box;
-  display: inline;
-  font-size: 8px;
-  width: 100%;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.8);
-  content: "\25BC";
-  position: absolute;
-  text-align: center;
-}
-
-
-.d3-tip.n:after {
-  margin: -1px 0 0 0;
-  top: 100%;
-  left: 0;
+  color: #bfbfbf;
+  font-weight: bold;
 }

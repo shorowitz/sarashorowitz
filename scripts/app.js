@@ -7,14 +7,15 @@ $(document).ready(function() {
         scrollBar: true,
     });
 
-// inspired by and referenced : https://github.com/vlandham/gates_bubbles
+// inspired by: http://vallandingham.me/gates_bubbles/
+// referenced : https://github.com/vlandham/gates_bubbles
 
   function checkLocation() {
 
-    var margin = {top: 20, right: 20, bottom: 20, left: 20};
+    var margin = {top: 20, right: 20, bottom: 20, left: 0};
 
     var width = 800 - margin.left - margin.right,
-      height = 500 - margin.top - margin.bottom,
+      height = 450 - margin.top - margin.bottom,
       center = {
         "x": width / 2,
         "y": height / 2
@@ -40,16 +41,16 @@ $(document).ready(function() {
     .range([10, 85]);
 
   skillsData.forEach(function(d, i) {
-      var node;
-      node = {
-        id: i,
-        name: d.name,
-        type: d.type,
-        radius: radiusScale(d.value),
-        charge: radiusScale(d.value),
-        x: parseInt(Math.random() * 10),
-        y: parseInt(Math.random() * 10)
-      }
+    var node;
+    node = {
+      id: i,
+      name: d.name,
+      type: d.type,
+      radius: radiusScale(d.value),
+      charge: radiusScale(d.value),
+      x: parseInt(Math.random() * 10),
+      y: parseInt(Math.random() * 10)
+    }
       nodes.push(node);
     });
 
@@ -82,7 +83,6 @@ $(document).ready(function() {
       .on('mouseout', tip.hide)
 
     circles.transition().duration(2000).attr("r", function(d) { return d.radius; })
-
 
   };
 
@@ -127,7 +127,7 @@ $(document).ready(function() {
   }
 
   function moveCenter(e) {
-      return function(d) {
+    return function(d) {
       d.x = d.x + (center.x - d.x) * (damper + 0.02) * e;
       d.y = d.y + (center.y - d.y) * (damper + 0.02) * e;
     };
@@ -142,7 +142,7 @@ $(document).ready(function() {
   }
 
   function displayTypeLabels() {
-    typesX = {"Operations": 160, "Development": width / 2, "Other": width - 160}
+    typesX = {"Operations/Administration": 160, "Development": width / 2, "Other": width - 160}
     typesData = d3.keys(typesX)
     typeLabels = svg.selectAll(".types")
       .data(typesData)
@@ -193,38 +193,27 @@ $(document).ready(function() {
     };
   }
 
-    //
+  d3.selectAll(".type")
+    .on("click", function(e) {
+      displayTypes()
+      displayTypeLabels()
+    })
 
+  d3.selectAll(".all")
+    .on("click", function(e) {
+      displayAll()
+      hideTypes()
+    })
 
-    d3.selectAll(".type")
-      .on("click", function(e) {
-        displayTypes()
-        displayTypeLabels()
-      })
+  var currentHash = location.hash;
+  if (currentHash ==="#skills") {
+    svg = d3.selectAll(".viz").remove()
+    bubbles(skillsData)
+    start()
+    displayAll()
+    }
+  }
 
-    d3.selectAll(".all")
-      .on("click", function(e) {
-        displayAll()
-        hideTypes()
-      })
+  window.onhashchange = checkLocation
 
-      // bubbles(skillsData)
-      // start()
-      // displayAll()
-
-
-        var currentHash = location.hash;
-        if (currentHash ==="#skills") {
-          svg = d3.selectAll(".viz").remove()
-          bubbles(skillsData)
-          start()
-          displayAll()
-        }
-      }
-
-
-    window.onhashchange = checkLocation
-
-
-
-  });
+});

@@ -101,7 +101,7 @@ var skillsData = [
    },
    {
      "name": "Microsoft Office",
-     "value": 8,
+     "value": 9,
      "type": "admin"
    },
    {
@@ -160,8 +160,13 @@ var skillsData = [
      "type": "writing"
    },
    {
-     "name": "dancing like a fool",
-     "value": 15,
+     "name": "jazz hands",
+     "value": 13,
+     "type": "writing"
+   },
+   {
+     "name": "pizza hunting",
+     "value": 11,
      "type": "writing"
    },
    {
