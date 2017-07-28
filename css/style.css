@@ -141,7 +141,7 @@ body {
 }
 
 .about img {
-  max-width: 80%;
+  max-width: 65%;
   max-height: 80%;
   vertical-align: middle;
 }
@@ -471,11 +471,11 @@ and (max-device-width : 600px)
     display: block;
   }
   .photo {
-    width: 100%;
+    width: 80%;
   }
-  img {
+  .about img {
     /*margin-top: 20px;*/
-    max-width: 100%;
+    max-width: 80%;
   }
 
   .skills-viz {

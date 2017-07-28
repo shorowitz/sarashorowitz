@@ -5,7 +5,10 @@ $(document).ready(function() {
         slidesNavigation: true,
         menu: '#myMenu',
         scrollBar: true,
+        fitToSection: false
     });
+
+    checkLocation();
 
 // inspired by: http://vallandingham.me/gates_bubbles/
 // referenced : https://github.com/vlandham/gates_bubbles
@@ -61,7 +64,7 @@ $(document).ready(function() {
       })
 
   function bubbles (skillsData) {
-    svg = d3.select("#d3")
+     svg = d3.select("#d3")
       .append("svg")
       .attr("class", "viz")
       .attr("width", width + margin.left + margin.right)
@@ -199,19 +202,22 @@ $(document).ready(function() {
       displayTypeLabels()
     })
 
-
   var currentHash = location.hash;
-  if (currentHash ==="#skills") {
+  if ($(window).width() < 600) {
 
+    if (currentHash === "#home" || "#skills") {
+      bubbles(skillsData)
+      start()
+      displayAll()
+    }
+  } else if (currentHash === "#skills") {
     svg = d3.selectAll(".viz").remove()
     bubbles(skillsData)
     start()
     displayAll()
-    }
   }
+}
 
-  window.addEventListener('hashchange', function() {
-    checkLocation()
-  }, false)
+window.onhashchange = checkLocation;
 
 });
