@@ -1,8 +1,18 @@
+@font-face {
+  font-family: 'btitle';
+  src: url('./fonts/basictitlefont.eot');
+  src: url('./fonts/basictitlefont.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/basictitlefont.otf') format('opentype'),
+       url('./fonts/basictitlefont.woff') format('woff'),
+       url('./fonts/basictitlefont.ttf') format('truetype');
+}
+
 body {
   margin: 0 auto;
   text-align: center;
-  font-family: 'Lato', sans-serif;
-  color: #333
+  font-family:'Roboto', sans-serif;
+  color: #fff;
+  background-color: #000;
 }
 
 #myMenu {
@@ -20,11 +30,13 @@ body {
 #myMenu li {
   display: inline-block;
   padding: 10px;
-  color: #000;
-	background:#fff;
+  color: #fff;
+	background:#36454f;
 	background: rgba(255,255,255, 0.5);
 	-webkit-border-radius: 10px;
-            border-radius: 10px;
+  border-radius: 10px;
+  font-family: "btitle", sans-serif;
+
 }
 
 #menu li.active{
@@ -35,7 +47,7 @@ body {
 
 #myMenu li a{
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 .section {
@@ -43,29 +55,28 @@ body {
 }
 
 .section h1 {
+  margin: 0 auto;
   text-align: center;
   font-variant: small-caps;
   font-weight: 400;
+  font-family: "btitle", sans-serif;
+  font-size: 48px;
 }
 
 .home {
-  background-image: url("images/fog.jpg");
-  background-size: cover;
+  background-color: #000;
 }
 
 #name {
-  font-weight: 400;
-  font-variant: small-caps;
+  font-size: 120px;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+#job-title {
   font-size: 72px;
-}
-
-.home h2 {
-  font-size: 40px;
-}
-
-.about {
-  background-image: url("images/graysea.jpg");
-  background-size: cover;
+  font-family: "btitle", sans-serif;
+  font-variant: small-caps;
 }
 
 .about h1 {
@@ -77,13 +88,18 @@ body {
   display: inline-block;
   max-width: 800px;
   margin: 10px 0px 50px 0px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
 }
 
 .content p {
-  width: 600px;
+  max-width: 80%;
   margin: 0 auto;
   top: 6px;
   position: relative;
+  font-size: 20px;
 }
 
 .content h3 {
@@ -99,39 +115,96 @@ body {
   -webkit-border-radius: 10px;
             border-radius: 10px;
   padding: 10px;
+  font-family: "btitle", sans-serif;
 }
 
-#quote {
-  width: 700px;
+.container {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo {
+  width: 50%;
   margin: 0 auto;
+  text-align: center;
 }
 
-.skills {
-  background-image: url("images/sea.jpeg");
-  background-size: cover;
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
-.skills h1{
+.about img {
+  max-width: 80%;
+  max-height: 80%;
+  vertical-align: middle;
+}
+
+.about h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 34px;
+}
+
+.highlight-1 {
+  font-family: "btitle", sans-serif;
+  color: #70B16A;
+}
+
+.highlight-2 {
+  font-family: "btitle", sans-serif;
+  color: #55D5E0;
+}
+
+.highlight-3 {
+  color: #E11E2C;
+}
+
+.highlight-4 {
+  color: #A255A4;
+}
+
+
+.skills h1 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin-bottom: 0px 0px 40px 0px;
 }
 
-.toggle {
-  list-style: none;
-  margin: 0 auto;
-  display: flex;
+.skills-viz {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
 }
 
-.btn {
-  background-color: #FFFAFA;
-  font-size: 14px;
-  margin: 2px;
-  /*float: left;*/
-  padding: 5px;
+.skills-viz img {
+  max-width: 100%;
+}
+
+
+.skills .type {
   background:#fff;
   background: rgba(255,255,255, 0.5);
   -webkit-border-radius: 10px;
-  border-radius: 10px;
-  display: inline-block;
+            border-radius: 10px;
+  padding: 10px;
+  font-family: "btitle", sans-serif;
+  width: 100px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 100;
 }
 
 #d3 {
@@ -171,36 +244,70 @@ body {
   left: 0;
 }
 
-.portfolio {
-  background-image: url("images/graysea.jpg");
-  background-size: cover;
+.types {
+  font-family: "btitle", sans-serif;
+  fill: #fff;
 }
 
+
 .slide-title{
-  padding-top: 25px;
-  margin-bottom: -50px;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 0px 0px 40px 0px;
 }
+
 
 .slide p {
   margin: 0 auto;
   text-align: center;
   max-width: 850px;
+  padding-bottom: 10px;
 }
 
+.slide a {
+  text-decoration: none;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+.slide a:link, a:visited {
+  color: #1C617C;
+}
+
+.slide a:hover {
+  color: #FD8A2B;
+}
+
+
 .sshot {
-  height: 300px;
-  padding-top: 20px;
+  max-width:50%;
+  margin: 0 auto;
 }
 
 .sshot img{
-  height:100%;
-  box-shadow: 0 0 2px #666;
+  max-width: 100%;
+  /*box-shadow: 0 0 2px #666;*/
   background: #000;
 }
 
+.cactus img {
+  max-width: 85%;
+  vertical-align: middle;
+}
+
+.slide h2 {
+  font-family: "btitle", sans-serif;
+  margin: 5px;
+}
+
+.slide h4 {
+  margin: 5px 5px 20px 5px;
+}
+
 .contact {
-  background-image: url("images/sea.jpeg");
-  background-size: cover;
+  background-color: #000;
 }
 
 .contact h1{
@@ -216,17 +323,19 @@ body {
 }
 
 .info a {
-  font-weight: lighter;
   text-decoration: none;
+  font-weight: bold;
+  font-variant: small-caps;
 }
 
 .info a:link, a:visited {
-    color: blue;
+  color: #1C617C;
 }
 
 .info a:hover {
-    color: red;
+  color: #FD8A2B;
 }
+
 
 .footer {
   margin-top: 200px;
@@ -237,4 +346,145 @@ body {
   padding: 5px;
   color: #bfbfbf;
   font-weight: bold;
+}
+
+/* Clip text element */
+.clip-text {
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    margin: .25em
+    padding: .5em .75em;
+    text-align: center;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+    position: absolute;
+    content: '';
+}
+
+/* Background */
+.clip-text:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+    position: absolute;
+    z-index: -1;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: #000;
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+    background-position: -.65em 0;
+}
+
+.clip-text--no-textzone:after {
+    content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* Background image from http://thepatternlibrary.com/ and http://lorempixel.com */
+.clip-text_one {
+    background-image: url("images/cuadros.png");
+}
+
+.clip-text_two {
+  background-color: #FFF;
+}
+
+.clip-text_three {
+  background-image: url("images/leather-nunchuck.png");
+  font-family: 'Oswald', sans-serif;
+  font-size: 60px;
+  margin: 0;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 600px)
+ {
+
+  body {
+    margin: 0 auto;
+  }
+  .section {
+    margin: 0 auto;
+  }
+  #myMenu {
+    padding-top: 20px;
+    text-align: center;
+  }
+  #myMenu li {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 90px;
+  }
+  h2 {
+    font-size: 45px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 26px;
+    line-height: normal;
+  }
+  span a{
+    font-size: 30px;
+  }
+  #name {
+    font-size: 110px;
+  }
+  .content {
+    width: 80%;
+  }
+  .container {
+    display: block;
+  }
+  .photo {
+    width: 100%;
+  }
+  img {
+    /*margin-top: 20px;*/
+    max-width: 100%;
+  }
+
+  .skills-viz {
+    width: 100%;
+  }
+  .skills-viz img {
+    max-width: 80%;
+  }
+  .sshot {
+    max-width: 80%;
+  }
 }

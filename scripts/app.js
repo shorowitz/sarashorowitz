@@ -31,7 +31,7 @@ $(document).ready(function() {
 
   var colorScale = d3.scale.ordinal()
     .domain(["dev", "admin", "writing"])
-    .range(["#e0f3db","#a8ddb5","#43a2ca"]);
+    .range(["#57D2D9", "#E64B64","#FFAE3E"]);
 
   var maxAmount = d3.max(skillsData, function(d) {return  d.value; });
 
@@ -199,14 +199,10 @@ $(document).ready(function() {
       displayTypeLabels()
     })
 
-  d3.selectAll(".all")
-    .on("click", function(e) {
-      displayAll()
-      hideTypes()
-    })
 
   var currentHash = location.hash;
   if (currentHash ==="#skills") {
+
     svg = d3.selectAll(".viz").remove()
     bubbles(skillsData)
     start()
@@ -214,6 +210,8 @@ $(document).ready(function() {
     }
   }
 
-  window.onhashchange = checkLocation
+  window.addEventListener('hashchange', function() {
+    checkLocation()
+  }, false)
 
 });

@@ -85,7 +85,7 @@ var skillsData = [
      "type": "dev"
    },
    {
-     "name": "DigitalOcean",
+     "name": "Angular.js",
      "value": 8,
      "type": "dev"
    },
@@ -117,7 +117,7 @@ var skillsData = [
    {
      "name": "technical writing",
      "value": 10,
-     "type": "writing"
+     "type": "admin"
    },
    {
      "name": "poetry",
@@ -127,7 +127,7 @@ var skillsData = [
    {
      "name": "copywriting",
      "value": 10,
-     "type": "writing"
+     "type": "admin"
    },
    {
      "name": "research",
@@ -137,7 +137,7 @@ var skillsData = [
    {
      "name": "editing",
      "value": 10,
-     "type": "writing"
+     "type": "admin"
    },
    {
      "name": "Pivotal Tracker",
@@ -147,7 +147,7 @@ var skillsData = [
    {
      "name": "grant writing",
      "value": 10,
-     "type": "writing"
+     "type": "admin"
    },
    {
      "name": "project management",
@@ -179,4 +179,15 @@ var skillsData = [
      "value": 11,
      "type": "admin"
    },
+   {
+     "name": "song parody",
+     "value": 11,
+     "type": "writing"
+   },
+   {
+     "name": "'The Office' quotes",
+     "value": 8,
+     "type": "writing"
+   }
+
  ]
