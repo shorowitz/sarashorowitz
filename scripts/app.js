@@ -203,14 +203,7 @@ $(document).ready(function() {
     })
 
   var currentHash = location.hash;
-  if ($(window).width() < 600) {
-
-    if (currentHash === "#home" || "#skills") {
-      bubbles(skillsData)
-      start()
-      displayAll()
-    }
-  } else if (currentHash === "#skills") {
+  if (currentHash === "#skills") {
     svg = d3.selectAll(".viz").remove()
     bubbles(skillsData)
     start()
